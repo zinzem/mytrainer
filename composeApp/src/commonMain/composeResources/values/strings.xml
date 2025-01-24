@@ -1,0 +1,4 @@
+<resources>
+    <string name="home_last_session_never">Never completed</string>
+    <string name="home_last_session_date">Last session on %1$s</string>
+</resources>

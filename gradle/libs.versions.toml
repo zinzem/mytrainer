@@ -1,0 +1,44 @@
+[versions]
+agp = "8.2.2"
+android-compileSdk = "34"
+android-minSdk = "24"
+android-targetSdk = "34"
+
+androidx-navigation = "2.7.0-alpha06"
+androidx-lifecycle = "2.8.4"
+androidx-activityCompose = "1.9.0"
+composeUiTooling = "1.6.7"
+compose-plugin = "1.7.0"
+koin = "3.5.6"
+koin-compose = "1.1.5"
+koin-composeVm = "1.2.0-Beta5"
+kotlin = "2.0.0"
+kotlin-datetime = "0.6.1"
+ksp = "2.0.0-1.0.21"
+room = "2.7.0-alpha02"
+sqlite = "2.5.0-SNAPSHOT"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "composeUiTooling" }
+kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlin-datetime" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-compose" }
+koin-compose-vm = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin-composeVm" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-runtime-android = { group = "androidx.room", name = "room-runtime-android", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+sqlite-bundled = { module= "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "room" }
