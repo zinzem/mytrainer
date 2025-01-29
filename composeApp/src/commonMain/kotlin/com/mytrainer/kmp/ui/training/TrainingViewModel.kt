@@ -1,6 +1,7 @@
 package com.mytrainer.kmp.ui.training
 
 import androidx.lifecycle.viewModelScope
+import com.mytrainer.kmp.manager.TextToSpeechManager
 import com.mytrainer.kmp.ui.util.BaseViewModel
 import com.mytrainer.kmp.ui.util.Event
 import com.mytrainer.kmp.model.LEGS_TRAINING
@@ -19,10 +20,12 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import mytrainer.composeapp.generated.resources.Res
+import mytrainer.composeapp.generated.resources.training_recovery_30s_left
+import org.jetbrains.compose.resources.getString
 
 class TrainingViewModel(
-    //private val textToSpeechManager: TextToSpeechManager,
-    //private val resourceManager: ResourceManager
+    private val textToSpeechManager: TextToSpeechManager,
     private val trainingRepository: TrainingRepository
 ) : BaseViewModel<TrainingState>(TrainingState()) {
 
@@ -92,18 +95,18 @@ class TrainingViewModel(
                     .asSequence()
                     .asFlow()
                     .onEach {
-                        /*if (!state.value.isMuted) {
+                        if (!state.value.isMuted) {
                             when {
                                 state.value.recoveryTimeLeft == 30L -> {
                                     textToSpeechManager.say(
-                                        resourceManager.getString(R.string.recovery_30s_left)
+                                        getString(Res.string.training_recovery_30s_left)
                                     )
                                 }
                                 state.value.recoveryTimeLeft <= 5 -> {
                                     textToSpeechManager.say(state.value.recoveryTimeLeft.toString())
                                 }
                             }
-                        }*/
+                        }
                         delay(1000)
                         setState { copy(recoveryTimeLeft = recoveryTimeLeft - 1) }
                     }

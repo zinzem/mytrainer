@@ -30,14 +30,14 @@ import com.mytrainer.kmp.extension.count
 import com.mytrainer.kmp.extension.formatDuration
 import com.mytrainer.kmp.extension.toFormattedDate
 import com.mytrainer.kmp.model.Training
-import kmm_picsplash.composeapp.generated.resources.Res
-import kmm_picsplash.composeapp.generated.resources.home_last_session_date
-import kmm_picsplash.composeapp.generated.resources.home_last_session_never
-import kmm_picsplash.composeapp.generated.resources.ic_calendar
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.onSubscription
 import kotlinx.coroutines.launch
 import kotlinx.datetime.Instant
+import mytrainer.composeapp.generated.resources.Res
+import mytrainer.composeapp.generated.resources.home_last_session_date
+import mytrainer.composeapp.generated.resources.home_last_session_never
+import mytrainer.composeapp.generated.resources.ic_calendar
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -176,13 +176,3 @@ fun HomeScreenPreview() {
         }
     }
 }
-
-/*@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
-@Composable
-fun HomeScreenDarkModePreview() {
-    MyTrainerTheme {
-        Surface {
-            HomeScreen(HomeState(), {})
-        }
-    }
-}*/

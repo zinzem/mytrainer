@@ -10,6 +10,7 @@ Features:
 - Start a training, it will run through all the exercices and series in order, with a recovery countdown, skippable.
 - (Partly) localized
 - Light / Dark mode
+- TextToSpeech to announce 30s left and 5/4/3/2/1 before next series
 
 Tools:
 - Koin for dependency injection

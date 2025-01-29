@@ -34,15 +34,15 @@ import com.mytrainer.kmp.model.DEGRESSIVE_REP_SERIES
 import com.mytrainer.kmp.model.Exercise
 import com.mytrainer.kmp.model.Series
 import com.mytrainer.kmp.model.Training
-import kmm_picsplash.composeapp.generated.resources.Res
-import kmm_picsplash.composeapp.generated.resources.ic_check_circle
-import kmm_picsplash.composeapp.generated.resources.ic_pause_circle
-import kmm_picsplash.composeapp.generated.resources.ic_schedule
-import kmm_picsplash.composeapp.generated.resources.ic_volume_off
-import kmm_picsplash.composeapp.generated.resources.ic_volume_on
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.onSubscription
 import kotlinx.coroutines.launch
+import mytrainer.composeapp.generated.resources.Res
+import mytrainer.composeapp.generated.resources.ic_check_circle
+import mytrainer.composeapp.generated.resources.ic_pause_circle
+import mytrainer.composeapp.generated.resources.ic_schedule
+import mytrainer.composeapp.generated.resources.ic_volume_off
+import mytrainer.composeapp.generated.resources.ic_volume_on
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -349,27 +349,3 @@ fun TrainingRecoveryScreenPreview() {
         }
     }
 }
-
-/*@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
-@Composable
-fun TrainingRecoveryScreenDarkModePreview() {
-    MyTrainerTheme {
-        Surface {
-            TrainingScreen(
-                TrainingState(
-                training = Training(
-                    id = "PUSH_TRAINING",
-                    name = "Exercises Push",
-                    exercises = listOf(
-                        Exercise(
-                            name = "Dévelopé couché haltères",
-                            series = DEGRESSIVE_REP_SERIES,
-                            recoveryDurationS = 120
-                        )
-                    )
-                ),
-                recovery = true
-            ), {}, {}, {})
-        }
-    }
-}*/

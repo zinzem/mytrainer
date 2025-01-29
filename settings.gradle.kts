@@ -1,4 +1,4 @@
-rootProject.name = "KMM-PicSplash"
+rootProject.name = "MyTrainer"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
